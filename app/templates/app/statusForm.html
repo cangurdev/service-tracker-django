@@ -1,0 +1,50 @@
+{% extends './base.html' %} {% block content %}
+<div class="ui one column center aligned page grid" style="height: 80%;">
+  <div class="column twelve wide">
+    <form
+      class="ui form centered grid"
+      method="POST"
+      action=""
+      style="padding: 30px;"
+    >
+      {% csrf_token %}
+      <div class="six wide field">
+        <h4 class="ui dividing header">Device Information</h4>
+
+        <div class="field">
+          <label>Tracking Code</label>
+          <input type="text" name="name" placeholder="000000" />
+        </div>
+        <button class="ui button" type="submit">
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+  {%if record%}
+  <div class="row">
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Device</th>
+          <th>Model</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{record.ownerName}}</td>
+          <td>{{record.ownerSurname}}</td>
+          <td>{{record.deviceType}}</td>
+          <td>{{record.model}}</td>
+          <td>{{record.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}

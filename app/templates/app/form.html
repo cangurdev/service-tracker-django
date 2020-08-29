@@ -1,0 +1,68 @@
+{% extends './base.html' %} {% block content %}
+<div class="container" style="height: 100%;">
+  <form
+    class="ui form"
+    style="display: flex; justify-content: center; padding: 10px;"
+    action=""
+    method="POST"
+  >
+    {% csrf_token %}
+    <div class="six wide field">
+      <h4 class="ui dividing header">Personel Information</h4>
+
+      <label>Name Surname</label>
+      <div class="two fields">
+        <div class="field">
+          <input type="text" name="name" placeholder="First Name" required />
+        </div>
+        <div class="field">
+          <input type="text" name="surname" placeholder="Last Name" required />
+        </div>
+      </div>
+      <div class="field">
+        <label>Phone Number</label>
+        <div class="field">
+          <input type="text" name="phone" placeholder="5xx xxx xxxx" required />
+        </div>
+      </div>
+      <div class="field">
+        <label>Address</label>
+        <div class="field">
+          <textarea rows="2" name="address" required></textarea>
+        </div>
+      </div>
+      <h4 class="ui dividing header">Device Information</h4>
+      <div class="field">
+        <label>Device Type</label>
+        <div class="field">
+          <input type="text" name="type" placeholder="Phone" required />
+        </div>
+        <label>Brand - Model</label>
+        <div class="two fields">
+          <div class="field">
+            <input type="text" name="brand" placeholder="Brand" required />
+          </div>
+          <div class="field">
+            <input type="text" name="model" placeholder="Model" required />
+          </div>
+        </div>
+        <div class="field">
+          <label>Fault Description</label>
+          <div class="field">
+            <textarea rows="3" name="description" required></textarea>
+          </div>
+        </div>
+      </div>
+      <button class="ui button" type="submit">
+        Send
+      </button>
+    </div>
+  </form>
+</div>
+
+<script>
+  $(".message .close").on("click", function () {
+    $(this).closest(".message").transition("fade");
+  });
+</script>
+{% endblock %}

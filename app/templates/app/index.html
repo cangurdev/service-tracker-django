@@ -1,0 +1,89 @@
+{% extends './base.html' %} {% block content %} {% load static %}
+
+<div
+  class="ui inverted vertical masthead center aligned segment"
+  style="height: 50%;"
+>
+  <div class="ui text container" style="margin: 7rem;">
+    <h1 class="ui inverted header">
+      Teknik Takip
+    </h1>
+    <h2>Best Technical Service of Izmir</h2>
+    <a href="/appointment"
+      ><div class="ui huge primary button">
+        Make an Appointment<i class="right arrow icon"></i></div
+    ></a>
+  </div>
+</div>
+
+<div class="ui vertical stripe segment">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="eight wide column">
+        <h3 class="ui header">We Repair Broken Devices</h3>
+        <p>
+          Don't let damaged phones, tablets and laptops reduce your
+          productivity. You can rely on us for all your work and school repair
+          needs.
+        </p>
+        <h3 class="ui header">Best Technicians Are on Your Service</h3>
+        <p>
+          You want only the best technicians to work on your electronic devices.
+          Our highly skilled technician staff are experts in the field and keep
+          your device working like new.
+        </p>
+      </div>
+      <div class="six wide right floated column">
+        <img
+          class="ui large bordered rounded image"
+          src="{% static 'images/customer.jpg' %}"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui vertical stripe quote segment">
+  <div class="ui equal width stackable internally celled grid">
+    <div class="center aligned row">
+      <div class="column">
+        <img
+          src="{% static 'images/service.png' %}"
+          width="320px"
+          height="320px"
+        />
+        <p>7/24 Service</p>
+      </div>
+      <div class="column">
+        <img
+          src="{% static 'images/customer-service.png' %}"
+          width="320px"
+          height="320px"
+        />
+        <p>Customer Satisfaction Guaranteed</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui vertical stripe segment">
+  <div class="ui text container">
+    <h3 class="ui header">Stay At Home. We Will Come to You</h3>
+    <p>
+      Just make an appointment in our system. Then, we will come to your home
+      and receive your device.
+    </p>
+    <a class="ui large button" href="/appointment">Make an Appointment</a>
+    <h4 class="ui horizontal header divider">
+      <a href="#">Do you have an device on service</a>
+    </h4>
+    <h3 class="ui header">Check Out Your Device Status</h3>
+    <p>
+      You can easily check your device status with your tracking code in our
+      system.
+    </p>
+    <a class="ui large button" href="/device-status">Check out now</a>
+  </div>
+</div>
+
+{% endblock %}
